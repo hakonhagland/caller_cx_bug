@@ -15,7 +15,7 @@ My::Caller::test() : NULL
 My::Caller::test2() : main
 ```
 
-***Expected output**:
+**Expected output**:
 
 ```
 My::Caller::test() : main
