@@ -12,6 +12,10 @@ our $VERSION = '0.01';
 
 XSLoader::load();
 
+sub test {
+    test3();
+}
+
 sub test2 {
     my ( $package_name ) = caller;
 

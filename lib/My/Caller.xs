@@ -2,7 +2,7 @@
 #include "perl.h"
 #include "XSUB.h"
 
-void test() {
+void test3() {
     const PERL_CONTEXT *cx = caller_cx(0, NULL);
     if ( cx != NULL ) {
         char *pack_name = HvNAME((HV*)CopSTASH(cx->blk_oldcop));
@@ -18,12 +18,12 @@ MODULE = My::Caller	    PACKAGE = My::Caller
 PROTOTYPES: DISABLE
 
 void
-test ()
+test3 ()
         PREINIT:
         I32* temp;
         PPCODE:
         temp = PL_markstack_ptr++;
-        test();
+        test3();
         if (PL_markstack_ptr != temp) {
           PL_markstack_ptr = temp;
           XSRETURN_EMPTY;
